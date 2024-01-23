@@ -12,7 +12,7 @@ let resultFrom;
 let resultTo;
 let searchValue;
 
-// Even when currency is changed
+// Event when origin currency is changed
 fromCurrecy.addEventListener('change', (event) => {
     resultFrom = `${event.target.value}`;
 });
