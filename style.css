@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(246, 249, 251);
+    background-color: rgb(211, 220, 229);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -16,7 +16,7 @@ body {
     margin: auto;
     padding: 30px;
     border-radius: 5px;
-    background-color: rgba(217, 211, 211, 0.5);
+    background-color: rgba(173, 167, 167, 0.5);
     color: white;
 }
 
