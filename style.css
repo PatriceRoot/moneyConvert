@@ -4,10 +4,10 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    font-family: 'Amiri', cursive;
 }
 
 .heading {
-    font-family: 'Amiri', cursive;
     margin: 35px auto 20px;
 }
 
@@ -29,17 +29,12 @@ label {
 }
 
 #finalAmount {
-    font-family: 'Amiri', cursive;
     display: none;
     margin: 50px auto;
 }
 
 #finalAmount h2 {
     font-size: 50px;
-}
-
-.finalValue {
-    font-family: 'Amiri', serif;
 }
 
 @media (max-width: 768px) {
