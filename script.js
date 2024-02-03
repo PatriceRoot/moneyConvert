@@ -13,20 +13,20 @@ let resultTo;
 let searchValue;
 
 // Event when origin currency is changed
-fromCurrecy.addEventListener('change', (event) => {
-    resultFrom = `${event.target.value}`;
+fromCurrecy.addEventListener("change", (event) => {
+  resultFrom = `${event.target.value}`;
 });
 
 // Event when currency is changed
-toCurrecy.addEventListener('change', (event) => {
-    resultTo = `${event.target.value}`;
+toCurrecy.addEventListener("change", (event) => {
+  resultTo = `${event.target.value}`;
 });
 
-search.addEventListener('input', updateValue);
+search.addEventListener("input", updateValue);
 
 // Function for updating value
 function updateValue(e) {
-    searchValue = e.target.value;
+  searchValue = e.target.value;
 }
 
 // When user clicks, it calls function getresults
@@ -34,23 +34,23 @@ convert.addEventListener("click", getResults);
 
 // Function getresults
 function getResults() {
-    fetch(`${api}`)
-        .then(currency => {
-            return currency.json();
-        }).then(displayResults);
+  fetch(`${api}`)
+    .then((currency) => {
+      return currency.json();
+    })
+    .then(displayResults);
 }
 
 // Display results after conversion
 function displayResults(currency) {
-    let fromRate = currency.rates[resultFrom];
-    let toRate = currency.rates[resultTo];
-    finalValue.innerHTML =
-        ((toRate / fromRate) * searchValue).toFixed(2);
-    finalAmount.style.display = "block";
+  let fromRate = currency.rates[resultFrom];
+  let toRate = currency.rates[resultTo];
+  finalValue.innerHTML = ((toRate / fromRate) * searchValue).toFixed(2);
+  finalAmount.style.display = "block";
 }
 
 // When user click on reset button
 function clearVal() {
-    window.location.reload();
-    document.getElementsByClassName("finalValue").innerHTML = "";
-};
+  window.location.reload();
+  document.getElementsByClassName("finalValue").innerHTML = "";
+}
